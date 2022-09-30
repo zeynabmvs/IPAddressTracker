@@ -1,0 +1,41 @@
+@use '../util' as *;
+
+$border-radius-size: rem(14);
+
+.app_address {
+    display: inline-flex;
+
+    input {
+        color: var(--black);
+        font-size: rem(14);
+        border: none;
+        border-bottom-left-radius: $border-radius-size;
+        border-top-left-radius: $border-radius-size;
+        height: rem(58);
+        width: 80vw;
+        padding-left: rem(23);
+        padding-right: rem(23);
+        background-color: var(--white);
+        transition: all 150ms ease-in-out;
+        font-family: inherit;
+
+        @include breakpoint(medium) {
+            width: 60vw;
+        }
+    }
+
+    button {
+        height: rem(58);
+        width: rem(58);
+        border-bottom-right-radius: $border-radius-size;
+        border-top-right-radius: $border-radius-size;
+        background-color: var(--black);
+        border: none;
+        cursor: pointer;
+        transition: all 150ms ease-in-out;
+
+        &:hover {
+            background-color: var(--very-dark-gray);
+        }
+    }
+}

@@ -1,24 +1,23 @@
+@use '../util' as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
 
 :root {
-    --font-size: 1.125rem;
+    --base-font-size: 1.125rem;
+    
+    --font-size: var(--base-font-size);
     --font-family: 'Rubik', sans-serif;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fx-700: 700;
+
+    @include breakpoint(medium) {
+        --font-size: calc(var(--base-font-size) + 0.75vw);
+    }
 }
 
 body {
     font-family: var(--font-family);
     font-size: var(--font-size);
-    
-}
-
-.fw-400 {
-    font-weight: 400;
-}
-
-.fw-500 {
-    font-weight: 500;
-}
-
-.fw-700 {
-    font-weight: 700;
+    font-weight: var(--fw-400);
 }

@@ -96,3 +96,7 @@ ul {
 .border-none {
   border: none;
 }
+
+.center-horizontal {
+  @include center('horizontal');
+}

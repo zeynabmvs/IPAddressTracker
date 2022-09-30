@@ -1,41 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-	<link rel='stylesheet' id='sepid-css' href='/dist/style.css' type='text/css' media='all' />
+  <link rel='stylesheet' id='sepid-css' href='/dist/style.css' type='text/css' media='all' />
 
   <title>Frontend Mentor | IP Address Tracker</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
 
-  <h1 class="text-white">IP Adress Tracker</h1>
-  <section class="address-form">
-    <input type="text">Searh for any IP address or domain
-    <button type="submit">
-      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
-    </button>
-  </section>
+  <main>
+    <div class="app">
+    <h1 class="app_title">IP Adress Tracker</h1>
+    <form class="app_address">
+      <input type="text" placeholder="Searh for any IP address or domain">
+      <button type="submit">
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
+          <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
+        </svg>
+      </button>
+    </form>
 
-  Search for any IP address or domain
+    <section class="output">
 
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
-  
+    </section>
+  </div>
+  </main>
+
+  <!-- IP Address -->
+  <!-- Location -->
+  <!-- Timezone -->
+  <!-- UTC add offset value dynamically using the API -->
+  <!-- ISP -->
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+
 </html>
