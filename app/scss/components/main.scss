@@ -25,6 +25,10 @@ main {
             color: var(--white);
             text-align: center;
             margin-bottom: rem(34);
+
+            @include breakpoint(medium) {
+                margin-bottom: rem(34);
+            }
         }
     }
 

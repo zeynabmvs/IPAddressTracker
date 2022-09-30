@@ -4,6 +4,7 @@ $border-radius-size: rem(14);
 
 .app_address {
     display: inline-flex;
+    margin-bottom: rem(24);
 
     input {
         color: var(--black);
@@ -21,6 +22,7 @@ $border-radius-size: rem(14);
 
         @include breakpoint(medium) {
             width: 60vw;
+            margin-bottom: rem(48);
         }
     }
 
