@@ -1,0 +1,57 @@
+@use '../util' as *;
+
+.output {   
+    background-color: var(--white);
+    border-radius: var(--border-radius-size);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: rem(27) rem(30);
+    width: 100%;
+
+    @include breakpoint(medium) {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between; 
+        padding: rem(40) 0;
+    }
+
+    &_box {
+        // position: relative;
+
+        // &::after{
+        //     content: " ";
+        //     display: block;
+        //     height: 100%;
+        //     width: 2px;
+        //     background: black;
+        //     position: absolute;
+
+        // }
+        padding: 0 rem(20);
+
+        &:not(:first-child){
+            @include breakpoint(medium) {
+                border-left-width: 1px;
+                border-left-style: solid;
+                border-color: var(--dark-gray);
+            }
+            
+        }
+        
+        &_title {
+            text-transform: uppercase;
+            color: var(--dark-gray);
+            font-size: var(--font-size-small);
+            font-weight: var(--fw-500);
+            margin-bottom: rem(15);
+        }
+
+        &_value {
+            font-weight: var(--fw-700);
+            margin-bottom: rem(30);
+        }
+    }
+
+
+}
