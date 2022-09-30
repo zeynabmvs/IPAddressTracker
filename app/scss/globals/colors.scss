@@ -1,11 +1,15 @@
 :root {
     --very-dark-gray: hsl(0, 0%, 17%);
-    --dark-gray: hsl(0, 0%, 59%)
+    --dark-gray: hsl(0, 0%, 59%);
+    --black: #000000;
+    --white: #ffffff;
 }
 
 $colors: (
     'very-dark-gray': #{var(--very-dark-gray)},
     'dark-gray': #{var(--dark-gray)},
+    'black': #{var(--black)},
+    'white': #{var(--white)},
 ); 
 
 @each $color, $value in $colors {
