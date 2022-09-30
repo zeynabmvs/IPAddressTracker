@@ -1,0 +1,18 @@
+:root {
+    --very-dark-gray: hsl(0, 0%, 17%);
+    --dark-gray: hsl(0, 0%, 59%)
+}
+
+$colors: (
+    'very-dark-gray': #{var(--very-dark-gray)},
+    'dark-gray': #{var(--dark-gray)},
+); 
+
+@each $color, $value in $colors {
+    .text-#{$color} {
+        color: $value;
+    }
+    .bg-#{$color} {
+        background-color: $value;
+    }
+}

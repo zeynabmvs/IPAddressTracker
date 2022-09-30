@@ -1,0 +1,98 @@
+@use '../util' as *;
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+.hide-for-mobile {
+  @include breakpoint-down(small) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint(medium) {
+    display: none;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+// Width Helper classes
+.w-100 {
+  width: 100%;
+}
+
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.flip-horizontally {
+  transform: scaleX(-1);
+}
+
+.position {
+
+  &-absolute {
+    position: absolute !important;
+  }
+
+  &-relative{
+    position: relative !important;
+  }
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.border-none {
+  border: none;
+}

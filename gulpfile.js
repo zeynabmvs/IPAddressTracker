@@ -13,14 +13,7 @@ const browsersync = require('browser-sync').create();
 
 // Sass Task
 function scssTask() {
-  return src('assets/scss/style.scss', { sourcemaps: true })
-    .pipe(sass())
-    .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(dest('dist', { sourcemaps: '.' }));
-}
-
-function bootstrapTask() {
-  return src('assets/scss/bootstrap-grid.scss', { sourcemaps: true })
+  return src('app/scss/style.scss', { sourcemaps: true })
     .pipe(sass())
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(dest('dist', { sourcemaps: '.' }));
@@ -59,13 +52,13 @@ function browserSyncReload(cb) {
 function watchTask() {
   watch('*.html', browserSyncReload);
   watch(
-    ['assets/scss/**/*.scss', 'assets/**/*.js'],
+    ['app/scss/**/*.scss', 'app/**/*.js'],
     series(scssTask, jsTask, browserSyncReload)
   );
 }
 
 // Default Gulp Task
-exports.default = series(scssTask, bootstrapTask, jsTask, browserSyncServe, watchTask);
+exports.default = series(scssTask, jsTask, browserSyncServe, watchTask);
 // exports.default = series(scssTask, browserSyncServe, watchTask);
 
 // Build Gulp Task
