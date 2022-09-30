@@ -4,9 +4,11 @@
 .app_address {
     display: inline-flex;
     margin-bottom: rem(24);
+    width: 100%;
 
     @include breakpoint(medium) {
         margin-bottom: rem(48);
+        width: 70%;
     }
 
     input {

@@ -1,5 +1,8 @@
 @use '../util' as *;
 
+body {
+
+}
 main {
     background-image: url('/images/pattern-bg.png');
     background-position: center;
@@ -7,8 +10,8 @@ main {
     background-repeat: no-repeat;
     background-size: 100% 33%;
     background-color: bisque;
-    // height: 97vh;
     padding-top: rem(30);
+    height: 100vh;
     
     @include breakpoint(medium) {
         background-size: 100% 28%;
