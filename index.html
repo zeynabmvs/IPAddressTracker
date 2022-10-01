@@ -29,9 +29,9 @@
   <main>
     <div class="app">
     <h1 class="app_title">IP Adress Tracker</h1>
-    <form class="app_address">
-      <input type="text" placeholder="Searh for any IP address or domain">
-      <button type="submit">
+    <form id="my-form" class="app_address">
+      <input id="js-input"  type="text" placeholder="Searh for any IP address or domain" required>
+      <button type="button" id="js-btn">
         <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
           <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
         </svg>
@@ -41,19 +41,19 @@
     <section class="output">
       <div class="output_box">
         <span class="output_box_title">IP Address</span>
-        <p class="output_box_value">192.212.174.101</p>
+        <p id="ip-value" class="output_box_value">192.212.174.101</p>
       </div>
       <div class="output_box">
         <span class="output_box_title">Location</span>
-        <p class="output_box_value">Brooklyn, NY 10001</p>
+        <p id="location-value" class="output_box_value">Brooklyn, NY 10001</p>
       </div>
       <div class="output_box">
         <span class="output_box_title">Timezone</span>
-        <p class="output_box_value">UTC-05:00</p>
+        <p id="timezone-value" class="output_box_value">UTC-05:00</p>
       </div>
       <div class="output_box">
         <span class="output_box_title">ISP</span>
-        <p class="output_box_value">SpaceX Starlink</p>
+        <p id="isp-value" class="output_box_value">SpaceX Starlink</p>
       </div>
     </section>
   </div>
@@ -63,6 +63,9 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src='/app/js/jquery.min.js'></script>
+	<script src="/app/js/api.js"></script>
 </body>
 
 </html>
