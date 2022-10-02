@@ -81,8 +81,8 @@ jQuery(document).ready(function ($) {
     });  
 
     // On page load set map to user's location
-    // getLocation('192.212.174.101');
-    locateOnMap(51.505, -0.09);
+    getLocation('192.212.174.101');
+    // locateOnMap(51.505, -0.09);
 
     
     $("#js-btn").click(function () {
