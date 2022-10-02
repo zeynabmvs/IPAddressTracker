@@ -8,12 +8,14 @@ main {
     background-position: center;
     background-position: top;
     background-repeat: no-repeat;
-    background-size: 100% 33%;
-    padding-top: rem(30);
-    // height: 100vh;
+    background-size: 100% 170px;
+    position: relative;
+    z-index: 1000;
+    height: 170px;
     
     @include breakpoint(medium) {
-        // background-size: 100% 28%;
+        background-size: 100% 200px;
+        height: 200px;
     }
 
     .app {
@@ -28,10 +30,10 @@ main {
             font-weight: var(--fw-500);
             color: var(--white);
             text-align: center;
-            margin-bottom: rem(34);
+            padding: rem(30) 0;
 
             @include breakpoint(medium) {
-                margin-bottom: rem(34);
+                padding: rem(34) 0;
             }
         }
     }

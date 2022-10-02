@@ -3,11 +3,11 @@
 
 .app_address {
     display: inline-flex;
-    margin-bottom: rem(24);
+    margin-bottom: rem(18);
     width: 100%;
 
     @include breakpoint(medium) {
-        margin-bottom: rem(48);
+        margin-bottom: rem(36);
         width: 70%;
     }
 
