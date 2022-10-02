@@ -9,12 +9,11 @@ main {
     background-position: top;
     background-repeat: no-repeat;
     background-size: 100% 33%;
-    background-color: bisque;
     padding-top: rem(30);
-    height: 100vh;
+    // height: 100vh;
     
     @include breakpoint(medium) {
-        background-size: 100% 28%;
+        // background-size: 100% 28%;
     }
 
     .app {

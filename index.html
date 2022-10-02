@@ -8,9 +8,10 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel='stylesheet' id='sepid-css' href='/dist/style.css' type='text/css' media='all' />
-  
+
   <!-- Leaflet styles, map api -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
+    integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
 
   <title>Frontend Mentor | IP Address Tracker</title>
 
@@ -31,35 +32,35 @@
 
   <main>
     <div class="app">
-    <h1 class="app_title">IP Adress Tracker</h1>
-    <form id="my-form" class="app_address">
-      <input id="js-input"  type="text" placeholder="Searh for any IP address or domain" required>
-      <button type="button" id="js-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
-          <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
-        </svg>
-      </button>
-    </form>
+      <h1 class="app_title">IP Adress Tracker</h1>
+      <form id="my-form" class="app_address">
+        <input id="js-input" type="text" placeholder="Searh for any IP address or domain" required>
+        <button type="button" id="js-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
+            <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
+          </svg>
+        </button>
+      </form>
 
-    <section class="output">
-      <div class="output_box">
-        <span class="output_box_title">IP Address</span>
-        <p id="ip-value" class="output_box_value">192.212.174.101</p>
-      </div>
-      <div class="output_box">
-        <span class="output_box_title">Location</span>
-        <p id="location-value" class="output_box_value">Brooklyn, NY 10001</p>
-      </div>
-      <div class="output_box">
-        <span class="output_box_title">Timezone</span>
-        <p id="timezone-value" class="output_box_value">UTC-05:00</p>
-      </div>
-      <div class="output_box">
-        <span class="output_box_title">ISP</span>
-        <p id="isp-value" class="output_box_value">SpaceX Starlink</p>
-      </div>
-    </section>
-  </div>
+      <section class="output">
+        <div class="output_box">
+          <span class="output_box_title">IP Address</span>
+          <p id="ip-value" class="output_box_value">192.212.174.101</p>
+        </div>
+        <div class="output_box">
+          <span class="output_box_title">Location</span>
+          <p id="location-value" class="output_box_value">Brooklyn, NY 10001</p>
+        </div>
+        <div class="output_box">
+          <span class="output_box_title">Timezone</span>
+          <p id="timezone-value" class="output_box_value">UTC-05:00</p>
+        </div>
+        <div class="output_box">
+          <span class="output_box_title">ISP</span>
+          <p id="isp-value" class="output_box_value">SpaceX Starlink</p>
+        </div>
+      </section>
+    </div>
   </main>
 
   <div id="map"></div>
@@ -72,9 +73,10 @@
   </div>
 
   <script src='/app/js/jquery.min.js'></script>
-  <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
-	<script src="/app/js/location.js"></script>
-	<script src="/app/js/map.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+    integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
+  <script src="/app/js/location.js"></script>
+  <script src="/app/js/map.js"></script>
 </body>
 
 </html>
