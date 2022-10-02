@@ -57,25 +57,32 @@ jQuery(document).ready(function ($) {
 
     var ip = null;
     var domain = null;
+    
+    $(':text').bind('keydown',function(e){ //on keydown for all textboxes  
+        if(e.keyCode==13) //if this is enter key  
+            e.preventDefault();                  
+    });  
 
     // On page load set map to user's location
-    getLocation('192.212.174.101');
+    // getLocation('192.212.174.101');
     // locateOnMap(51.505, -0.09);
 
+    
     $("#js-btn").click(function () {
         var ipOrDomain = $("#js-input").val();
 
         if (isIpValid(ipOrDomain)) {
             ip = ipOrDomain;
-            console.log('ip', ip);
+            getLocation(ip, domain);
+
         } else if (isDomainValid(ipOrDomain)) {
             domain = ipOrDomain;
-            console.log('domain', domain);
+            getLocation(ip, domain);
+
         } else {
             alert('invalid');
         }
 
-        getLocation(ip, domain);
 
     });
 
