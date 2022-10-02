@@ -16,7 +16,17 @@ jQuery(document).ready(function ($) {
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
-        var marker = L.marker([lat, lng]).addTo(map);
+        var locationIcon = L.icon({
+            iconUrl: '/images/icon-location.svg',
+            iconSize: [32, 60],
+            iconAnchor: [22, 94],
+            popupAnchor: [-3, -76],
+            // shadowUrl: 'my-icon-shadow.png',
+            shadowSize: [68, 95],
+            shadowAnchor: [22, 94]
+        });
+
+        var marker = L.marker([lat, lng], {icon: locationIcon}).addTo(map);
     }
 
 
@@ -71,8 +81,8 @@ jQuery(document).ready(function ($) {
     });  
 
     // On page load set map to user's location
-    getLocation('192.212.174.101');
-    // locateOnMap(51.505, -0.09);
+    // getLocation('192.212.174.101');
+    locateOnMap(51.505, -0.09);
 
     
     $("#js-btn").click(function () {
