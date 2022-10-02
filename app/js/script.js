@@ -2,6 +2,13 @@
 jQuery(document).ready(function ($) {
 
     function locateOnMap(lat, lng) {
+
+        // first delete the current map if it existed
+        $('#map').remove();
+        
+        // create the div for map
+        $('#map-wrapper').append(`<div id="map"></div>`);
+
         var map = L.map('map').setView([lat, lng], 13);
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -64,7 +71,7 @@ jQuery(document).ready(function ($) {
     });  
 
     // On page load set map to user's location
-    // getLocation('192.212.174.101');
+    getLocation('192.212.174.101');
     // locateOnMap(51.505, -0.09);
 
     
@@ -80,9 +87,8 @@ jQuery(document).ready(function ($) {
             getLocation(ip, domain);
 
         } else {
-            alert('invalid');
+            alert('Please enter a valid domain or IP adress.');
         }
-
 
     });
 
